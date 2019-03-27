@@ -83,6 +83,7 @@ table {
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 html, body {
@@ -99,7 +100,7 @@ p, a, li {
 
 p {
   font-size: 1.6rem;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 
 li {
@@ -123,6 +124,12 @@ h2 {
   margin: 0 auto;
   padding: 30px 0;
   background: @mine-shaft;
+
+  h2 {
+    @media (max-width: 500px) {
+      font-size: 2.2rem;
+    }
+  }
 }
 
 // Top Navigation
@@ -133,6 +140,28 @@ h2 {
     flex: 0 0 100%;
     text-align: center;
     margin: 0 0 50px;
+
+    @media (max-width: 500px) {
+      margin: 0 0 25px;
+    }
+
+    h1 {
+      font-size: 3.6rem;
+      text-align: center;
+      margin-bottom: 1rem;
+
+      @media (max-width: 500px) {
+        font-size: 2.6rem;
+      }
+    }
+
+    h2 {
+      font-size: 2.8rem;
+      @media (max-width: 500px) {
+        font-size: 2rem;
+      }
+    }
+
   }
 
   nav {
@@ -177,10 +206,19 @@ h2 {
   background: @light-grey;
   padding: 50px 0;
 
-  
-
   .container {
     align-items: center;
+
+    @media (max-width: 500px) {
+      flex-direction: column;
+    }
+
+  }
+
+  .col-2 {
+    @media (max-width: 500px) {
+      order: -1;
+    }
   }
 
   h2 {
@@ -195,23 +233,41 @@ h2 {
 }
 
 .bio-image {
-  max-width: 120px;
-  border-radius: 20%;
+  max-width: 140px;
+  border-radius: 10%;
   border: 2px solid @java;
+
+  @media (max-width: 500px) {
+    display: none;
+  }
 }
 
-// Skills Section
+// Skills
 
-.skills {
+.skills-section {
   background: @white;
   padding: 50px 0;
 
   h2 {
     color: @mine-shaft;
+    @media (max-width: 500px) {
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+  }
+
+  .container {
+    @media (max-width: 500px) {
+      flex-direction: column;
+    }
   }
 
   .list-container {
     .space-around();
+    @media (max-width: 500px) {
+      display: block;
+      margin: 0 auto;
+    }
   }
 
   li {
@@ -222,7 +278,7 @@ h2 {
 
 }
 
-.work-history {
+.work-section {
   background: @light-grey;
   padding: 50px 0;
 
@@ -237,9 +293,9 @@ h2 {
   }
 }
 
-.contact {
-  background: @mine-shaft;
-  padding: 50px 0;
+.contact-section {
+  background: @white;
+  padding: 50px 0 30px;
 
   .container {
     .flex-center();
@@ -248,10 +304,16 @@ h2 {
   h2 {
     margin-bottom: 0.7em;
     text-align: center;
+    color: @mine-shaft;
   }
 
   p {
-    color: @white;
+    color: @mine-shaft;
+
+    @media (max-width: 500px) {
+      text-align: center;
+      max-width: 290px;
+    }
   }
 
 
@@ -260,33 +322,47 @@ h2 {
 .form-container {
   max-width: 600px;
   margin: 0 auto;
-  padding: 50px;
+  padding: 50px 50px 30px;
+  @media (max-width: 500px) {
+    max-width: 290px;
+    text-align: center;
+  }
 
   .form-row {
     display: flex;
     align-items: center;
-    margin-bottom: 35px;
+    margin-bottom: 3.2rem;
+    flex-wrap: wrap;
+    @media (max-width: 500px) {
+      display: block;
+      
+    }
 
     label {
       flex: 1;
       font-size: 1.7rem;
       font-family: @cabin;
-      color: @white;
+      color: @mine-shaft;
+      @media (max-width: 500px) {
+        text-align: left;
+        display: block;
+        margin-left: 1rem;
+        margin-bottom: 1rem;
+      }
     }
 
     input {
       padding: 10px 20px 10px 5px;
       width: auto;
       flex: 3;
-      border: 2px solid @light-grey;
-      border-radius: 4px;
+      border: 3px solid @mine-shaft;
+      border-radius: 3px;
       font-size: 14px;
       transition: 0.2s all ease-in-out;
 
       &:focus {
         outline: none;
-        border: 2px solid @java;
-        box-shadow: 1px 3px 0 rgba(0,0,0,0.8);
+        border: 3px solid @java;
       }
 
     }
@@ -297,15 +373,15 @@ h2 {
       padding: 10px 20px 10px 5px;
       flex: 3;
       width: auto;
-      border: 4px solid @light-grey;
+      border: 3px solid @mine-shaft;
       border-radius: 4px;
       font-size: 14px;
       transition: 0.2s all ease-in-out;
+      resize: none;
 
       &:focus{
         outline: none;
-        border: 4px solid @java;
-        box-shadow: 1px 3px 0 rgba(0,0,0,0.8);
+        border: 3px solid @java;
       }
 
     }
@@ -313,6 +389,7 @@ h2 {
 
   .submit-row {
     display: flex;
+    margin-top: 4rem;
   }
 
   .btn {
@@ -334,6 +411,8 @@ h2 {
 }
 
 footer {
+  padding: 30px 0 0;
+
   p {
     color: @white;
   }
