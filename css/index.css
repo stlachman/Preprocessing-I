@@ -172,6 +172,7 @@ h2 {
   width: 100%;
   margin: 0 auto;
   padding: 30px 0;
+  border: 3px solid #000;
   background: #272323;
 }
 @media (max-width: 500px) {
@@ -224,11 +225,26 @@ h2 {
   font-family: 'Cabin', sans-serif;
   text-decoration: none;
   color: #FCFCFC;
+  position: relative;
 }
 @media (max-width: 500px) {
   .top-header nav a {
     font-size: 1.5rem;
   }
+}
+.top-header nav a:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  background: #1EBABA;
+  height: 2px;
+  left: 0;
+  bottom: -6px;
+  opacity: 0;
+  transition: 0.25s opacity ease-in-out;
+}
+.top-header nav a:hover:after {
+  opacity: 1;
 }
 .container {
   max-width: 820px;
@@ -287,7 +303,7 @@ h2 {
 }
 @media (max-width: 500px) {
   .skills-section h2 {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     text-align: center;
   }
 }
