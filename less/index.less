@@ -58,8 +58,22 @@ table {
 @cabin: 'Cabin', sans-serif;
 @raleway: 'Raleway', sans-serif;
 
-@gray-chateau: #A6ACAF;
+@cape-cod: #424949;
 @white: #FCFCFC;
+@java: #1EBABA;
+
+// Mixins 
+
+.flex-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.space-evenly() {
+  display: flex;
+  justify-content: space-evenly;
+}
 
 html {
   font-size: 62.5%;
@@ -69,20 +83,43 @@ html, body {
     height: 100%;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: @raleway;
+}
+
+p, a {
+  font-family: @cabin;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 3.6rem;
+  color: @white;
+}
+
+h2 {
+  font-size: 2.8rem;
+  color: @white;
+}
+
 .wrapper {
   max-width: 1100px;
   width: 100%;
   margin: 0 auto;
   padding: 30px 0;
-  background: @gray-chateau;
+  background: @cape-cod;
 }
 
+// Top Navigation
 .top-header {
   text-align: center;
 
   nav {
-    display: flex;
-    justify-content: space-evenly;
+    .space-evenly();
     @media (max-width: 500px) {
       flex-wrap: wrap;
     }
@@ -99,3 +136,57 @@ html, body {
   }
 
 }
+
+// Bio Section
+
+.container {
+  max-width: 820px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 15px;
+}
+
+.col-1 {
+  flex: 1;
+}
+
+.col-2 {
+  flex: 2;
+}
+
+.bio-content {
+  margin: 40px 0;
+  background: @java;
+  padding: 50px 0;
+
+  .main-headline {
+    flex: 0 0 100%;
+    text-align: center;
+    margin: 0 0 50px;
+  }
+
+  .container {
+    align-items: center;
+  }
+
+  h2 {
+    margin-bottom: 0.5em;
+  }
+
+  p {
+    color: @white;
+  }
+
+}
+
+.bio-image {
+  max-width: 120px;
+  border-radius: 20%;
+  border: 2px solid @white;
+}
+
+
+
+
+

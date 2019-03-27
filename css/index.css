@@ -137,12 +137,36 @@ html,
 body {
   height: 100%;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Raleway', sans-serif;
+}
+p,
+a {
+  font-family: 'Cabin', sans-serif;
+}
+p {
+  font-size: 1.6rem;
+  line-height: 1.2;
+}
+h1 {
+  font-size: 3.6rem;
+  color: #FCFCFC;
+}
+h2 {
+  font-size: 2.8rem;
+  color: #FCFCFC;
+}
 .wrapper {
   max-width: 1100px;
   width: 100%;
   margin: 0 auto;
   padding: 30px 0;
-  background: #A6ACAF;
+  background: #424949;
 }
 .top-header {
   text-align: center;
@@ -166,4 +190,41 @@ body {
   .top-header nav a {
     font-size: 1.5rem;
   }
+}
+.container {
+  max-width: 820px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 15px;
+}
+.col-1 {
+  flex: 1;
+}
+.col-2 {
+  flex: 2;
+}
+.bio-content {
+  margin: 40px 0;
+  background: #1EBABA;
+  padding: 50px 0;
+}
+.bio-content .main-headline {
+  flex: 0 0 100%;
+  text-align: center;
+  margin: 0 0 50px;
+}
+.bio-content .container {
+  align-items: center;
+}
+.bio-content h2 {
+  margin-bottom: 0.5em;
+}
+.bio-content p {
+  color: #FCFCFC;
+}
+.bio-image {
+  max-width: 120px;
+  border-radius: 20%;
+  border: 2px solid #FCFCFC;
 }
