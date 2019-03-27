@@ -58,7 +58,7 @@ table {
 @cabin: 'Cabin', sans-serif;
 @raleway: 'Raleway', sans-serif;
 
-@cape-cod: #424949;
+@light-grey: #eee;
 @white: #FCFCFC;
 @java: #1EBABA;
 @mine-shaft: #272323;
@@ -122,7 +122,7 @@ h2 {
   width: 100%;
   margin: 0 auto;
   padding: 30px 0;
-  background: @cape-cod;
+  background: @mine-shaft;
 }
 
 // Top Navigation
@@ -174,7 +174,7 @@ h2 {
 
 .bio-content {
   margin: 40px 0 0;
-  background: @java;
+  background: @light-grey;
   padding: 50px 0;
 
   
@@ -185,10 +185,11 @@ h2 {
 
   h2 {
     margin-bottom: 0.5em;
+    color: @mine-shaft;
   }
 
   p {
-    color: @white;
+    color: @mine-shaft;
   }
 
 }
@@ -196,7 +197,7 @@ h2 {
 .bio-image {
   max-width: 120px;
   border-radius: 20%;
-  border: 2px solid @white;
+  border: 2px solid @java;
 }
 
 // Skills Section
@@ -222,7 +223,7 @@ h2 {
 }
 
 .work-history {
-  background: #eee;
+  background: @light-grey;
   padding: 50px 0;
 
   h2 {
@@ -232,9 +233,108 @@ h2 {
 
   li {
     margin-bottom: 1.2em;
-    border-bottom: 2px solid @mine-shaft;
+    border-bottom: 2px solid @java;
   }
 }
+
+.contact {
+  background: @mine-shaft;
+  padding: 50px 0;
+
+  .container {
+    .flex-center();
+  }
+
+  h2 {
+    margin-bottom: 0.7em;
+    text-align: center;
+  }
+
+  p {
+    color: @white;
+  }
+
+
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 50px;
+
+  .form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 35px;
+
+    label {
+      flex: 1;
+      font-size: 1.7rem;
+      font-family: @cabin;
+      color: @white;
+    }
+
+    input {
+      padding: 10px 20px 10px 5px;
+      width: auto;
+      flex: 3;
+      border: 2px solid @light-grey;
+      border-radius: 4px;
+      font-size: 14px;
+      transition: 0.2s all ease-in-out;
+
+      &:focus {
+        outline: none;
+        border: 2px solid @java;
+        box-shadow: 1px 3px 0 rgba(0,0,0,0.8);
+      }
+
+    }
+
+    textarea {
+      min-height: 100px;
+      padding: 20px;
+      padding: 10px 20px 10px 5px;
+      flex: 3;
+      width: auto;
+      border: 4px solid @light-grey;
+      border-radius: 4px;
+      font-size: 14px;
+      transition: 0.2s all ease-in-out;
+
+      &:focus{
+        outline: none;
+        border: 4px solid @java;
+        box-shadow: 1px 3px 0 rgba(0,0,0,0.8);
+      }
+
+    }
+  }
+
+  .submit-row {
+    display: flex;
+  }
+
+  .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 2.6rem;
+      border: 1px solid @java;
+      background: @java;
+      color: @white;
+      font-family: @cabin;
+      font-size: 1.6rem;
+      transition: 0.3s all ease-in-out;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+      }
+  }
+}
+
+
+
 
 
 

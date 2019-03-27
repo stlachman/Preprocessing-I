@@ -171,7 +171,7 @@ h2 {
   width: 100%;
   margin: 0 auto;
   padding: 30px 0;
-  background: #424949;
+  background: #272323;
 }
 .top-header {
   text-align: center;
@@ -216,7 +216,7 @@ h2 {
 }
 .bio-content {
   margin: 40px 0 0;
-  background: #1EBABA;
+  background: #eee;
   padding: 50px 0;
 }
 .bio-content .container {
@@ -224,14 +224,15 @@ h2 {
 }
 .bio-content h2 {
   margin-bottom: 0.5em;
+  color: #272323;
 }
 .bio-content p {
-  color: #FCFCFC;
+  color: #272323;
 }
 .bio-image {
   max-width: 120px;
   border-radius: 20%;
-  border: 2px solid #FCFCFC;
+  border: 2px solid #1EBABA;
 }
 .skills {
   background: #FCFCFC;
@@ -259,5 +260,85 @@ h2 {
 }
 .work-history li {
   margin-bottom: 1.2em;
-  border-bottom: 2px solid #272323;
+  border-bottom: 2px solid #1EBABA;
+}
+.contact {
+  background: #272323;
+  padding: 50px 0;
+}
+.contact .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact h2 {
+  margin-bottom: 0.7em;
+  text-align: center;
+}
+.contact p {
+  color: #FCFCFC;
+}
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 50px;
+}
+.form-container .form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 35px;
+}
+.form-container .form-row label {
+  flex: 1;
+  font-size: 1.7rem;
+  font-family: 'Cabin', sans-serif;
+  color: #FCFCFC;
+}
+.form-container .form-row input {
+  padding: 10px 20px 10px 5px;
+  width: auto;
+  flex: 3;
+  border: 2px solid #eee;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: 0.2s all ease-in-out;
+}
+.form-container .form-row input:focus {
+  outline: none;
+  border: 2px solid #1EBABA;
+  box-shadow: 1px 3px 0 rgba(0, 0, 0, 0.8);
+}
+.form-container .form-row textarea {
+  min-height: 100px;
+  padding: 20px;
+  padding: 10px 20px 10px 5px;
+  flex: 3;
+  width: auto;
+  border: 4px solid #eee;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: 0.2s all ease-in-out;
+}
+.form-container .form-row textarea:focus {
+  outline: none;
+  border: 4px solid #1EBABA;
+  box-shadow: 1px 3px 0 rgba(0, 0, 0, 0.8);
+}
+.form-container .submit-row {
+  display: flex;
+}
+.form-container .btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 2.6rem;
+  border: 1px solid #1EBABA;
+  background: #1EBABA;
+  color: #FCFCFC;
+  font-family: 'Cabin', sans-serif;
+  font-size: 1.6rem;
+  transition: 0.3s all ease-in-out;
+}
+.form-container .btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }
