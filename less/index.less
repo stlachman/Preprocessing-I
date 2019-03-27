@@ -129,6 +129,12 @@ h2 {
 .top-header {
   text-align: center;
 
+  .main-headline {
+    flex: 0 0 100%;
+    text-align: center;
+    margin: 0 0 50px;
+  }
+
   nav {
     .space-evenly();
     @media (max-width: 500px) {
@@ -171,11 +177,7 @@ h2 {
   background: @java;
   padding: 50px 0;
 
-  .main-headline {
-    flex: 0 0 100%;
-    text-align: center;
-    margin: 0 0 50px;
-  }
+  
 
   .container {
     align-items: center;
@@ -217,7 +219,21 @@ h2 {
     margin-bottom: 0.5em;
   }
 
+}
 
+.work-history {
+  background: #eee;
+  padding: 50px 0;
+
+  h2 {
+    color: @mine-shaft;
+    margin-bottom: 0.75em;
+  }
+
+  li {
+    margin-bottom: 1.2em;
+    border-bottom: 2px solid @mine-shaft;
+  }
 }
 
 

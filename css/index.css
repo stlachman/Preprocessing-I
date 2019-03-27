@@ -176,6 +176,11 @@ h2 {
 .top-header {
   text-align: center;
 }
+.top-header .main-headline {
+  flex: 0 0 100%;
+  text-align: center;
+  margin: 0 0 50px;
+}
 .top-header nav {
   display: flex;
   justify-content: space-evenly;
@@ -214,11 +219,6 @@ h2 {
   background: #1EBABA;
   padding: 50px 0;
 }
-.bio-content .main-headline {
-  flex: 0 0 100%;
-  text-align: center;
-  margin: 0 0 50px;
-}
 .bio-content .container {
   align-items: center;
 }
@@ -248,4 +248,16 @@ h2 {
   font-size: 1.7rem;
   color: #272323;
   margin-bottom: 0.5em;
+}
+.work-history {
+  background: #eee;
+  padding: 50px 0;
+}
+.work-history h2 {
+  color: #272323;
+  margin-bottom: 0.75em;
+}
+.work-history li {
+  margin-bottom: 1.2em;
+  border-bottom: 2px solid #272323;
 }
