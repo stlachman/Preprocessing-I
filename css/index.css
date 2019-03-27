@@ -146,11 +146,16 @@ h6 {
   font-family: 'Raleway', sans-serif;
 }
 p,
-a {
+a,
+li {
   font-family: 'Cabin', sans-serif;
 }
 p {
   font-size: 1.6rem;
+  line-height: 1.2;
+}
+li {
+  font-size: 1.5rem;
   line-height: 1.2;
 }
 h1 {
@@ -205,7 +210,7 @@ h2 {
   flex: 2;
 }
 .bio-content {
-  margin: 40px 0;
+  margin: 40px 0 0;
   background: #1EBABA;
   padding: 50px 0;
 }
@@ -227,4 +232,20 @@ h2 {
   max-width: 120px;
   border-radius: 20%;
   border: 2px solid #FCFCFC;
+}
+.skills {
+  background: #FCFCFC;
+  padding: 50px 0;
+}
+.skills h2 {
+  color: #272323;
+}
+.skills .list-container {
+  display: flex;
+  justify-content: space-around;
+}
+.skills li {
+  font-size: 1.7rem;
+  color: #272323;
+  margin-bottom: 0.5em;
 }

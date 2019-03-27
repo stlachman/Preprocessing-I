@@ -61,6 +61,7 @@ table {
 @cape-cod: #424949;
 @white: #FCFCFC;
 @java: #1EBABA;
+@mine-shaft: #272323;
 
 // Mixins 
 
@@ -75,6 +76,11 @@ table {
   justify-content: space-evenly;
 }
 
+.space-around() {
+  display: flex;
+  justify-content: space-around;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -87,12 +93,17 @@ h1, h2, h3, h4, h5, h6 {
   font-family: @raleway;
 }
 
-p, a {
+p, a, li {
   font-family: @cabin;
 }
 
 p {
   font-size: 1.6rem;
+  line-height: 1.2;
+}
+
+li {
+  font-size: 1.5rem;
   line-height: 1.2;
 }
 
@@ -156,7 +167,7 @@ h2 {
 }
 
 .bio-content {
-  margin: 40px 0;
+  margin: 40px 0 0;
   background: @java;
   padding: 50px 0;
 
@@ -184,6 +195,29 @@ h2 {
   max-width: 120px;
   border-radius: 20%;
   border: 2px solid @white;
+}
+
+// Skills Section
+
+.skills {
+  background: @white;
+  padding: 50px 0;
+
+  h2 {
+    color: @mine-shaft;
+  }
+
+  .list-container {
+    .space-around();
+  }
+
+  li {
+    font-size: 1.7rem;
+    color: @mine-shaft;
+    margin-bottom: 0.5em;
+  }
+
+
 }
 
 
